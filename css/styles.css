@@ -5,13 +5,17 @@
 }
 body {
     font-family: Arial, sans-serif;
-    background-color: #414141;
+    background-image: url('../assets/Images/bg.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 #navbar {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.8);
     padding: 10px 20px;
 }
 #navbar a {
