@@ -1,0 +1,127 @@
+html, body {
+    height: 100vh;
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    flex-shrink: 0;
+}
+.slider-container {
+    overflow: hidden;
+    width: 100vw;
+    flex: 0 0 40vh;
+    margin-top: 10vh;
+}
+.slider-track {
+    display: flex;
+    width: calc(70vw * 9);
+    height: 100%;
+    animation: slide 45s infinite linear;
+}
+.slider-container:hover .slider-track,
+.slider-container:active .slider-track {
+    animation-play-state: paused;
+}
+@keyframes slide {
+    0% { transform: translateX(0); }
+    11.11% { transform: translateX(-70vw); }
+    22.22% { transform: translateX(-140vw); }
+    33.33% { transform: translateX(-210vw); }
+    44.44% { transform: translateX(-280vw); }
+    55.56% { transform: translateX(-350vw); }
+    66.67% { transform: translateX(-420vw); }
+    77.78% { transform: translateX(-490vw); }
+    88.89% { transform: translateX(-560vw); }
+    100% { transform: translateX(-560vw); }
+}
+.slide {
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    margin: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    flex-direction: row;
+    border: 2px solid #e0e0e0;
+}
+.text {
+    flex: 0.7;
+    padding: 20px;
+    text-align: left;
+}
+.text h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+.text p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+.image {
+    flex: 1.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+}
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.booking-section {
+    flex: 1;
+    padding: 40px;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.booking-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+.booking-section p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+.booking-btn {
+    background: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.booking-btn:hover {
+    background: #0056b3;
+}
+footer {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
