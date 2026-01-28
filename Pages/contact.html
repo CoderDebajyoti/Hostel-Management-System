@@ -18,8 +18,53 @@
         </div>
     </header>
     <main>
-        <h1>Contact Us</h1>
-        <p>Get in touch with us for any inquiries.</p>
+        <section class="contact-container">
+            <div class="booking">
+                <h2>Book a Service</h2>
+                <form method="post" action="#" class="booking-form" novalidate>
+                    <label for="studentId">Student ID</label>
+                    <input type="text" id="studentId" name="studentId" placeholder="e.g. S12345" required>
+
+                    <label for="roomNo">Room No.</label>
+                    <input type="text" id="roomNo" name="roomNo" placeholder="e.g. B-204" required>
+
+                    <label for="service">Service Required</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Select a service --</option>
+                        <option>Cleaning</option>
+                        <option>Maintenance</option>
+                        <option>Internet / Wi‑Fi</option>
+                        <option>Laundry</option>
+                        <option>Housekeeping</option>
+                        <option>Other</option>
+                    </select>
+
+                    <label for="details">Details (optional)</label>
+                    <textarea id="details" name="details" rows="4" placeholder="Describe the issue or request"></textarea>
+
+                    <button type="submit" class="btn">Submit Booking</button>
+                </form>
+            </div>
+
+            <aside class="emergency">
+                <h2>Emergency Contacts</h2>
+                <ul class="emergency-list">
+                    <li>
+                        <strong>Police:</strong>
+                        <span>100</span>
+                    </li>
+                    <li>
+                        <strong>Fire:</strong>
+                        <span>101</span>
+                    </li>
+                    <li>
+                        <strong>Ambulance:</strong>
+                        <span>102 or 108</span>
+                    </li>
+                </ul>
+                <p class="note">If this is a life-threatening emergency, call your local emergency number immediately.</p>
+            </aside>
+        </section>
     </main>
 
     <footer>

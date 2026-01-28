@@ -1,18 +1,15 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
+html {
   font-family: Arial, sans-serif;
   /* background-image: url("./../assets/Images/studydesk2.jpg"); */
 }
 
 .slider-container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   height: 100%;
-  max-height: 500px;
-  margin: 40px auto;
-  margin-top: 75px;
+  max-height: 420px;
+  margin: 20px auto;
+  margin-top: 48px;
   position: relative;
   overflow: hidden;
 }
@@ -33,7 +30,7 @@ body {
 
 .slide img {
   width: 100%;
-  height: 450px;
+  height: 360px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -66,60 +63,45 @@ body {
   cursor: pointer;
   z-index: 10;
 }
-/* 
-.nav::before {
-  content: "";
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-top: 3px solid #fff;
-  border-right: 3px solid #fff;
-} */
 
 .prev {
   left: 15px;
 }
 
-.prev::before {
-  transform: rotate(-135deg);
-  margin-left: 16px;
-  margin-top: 15px;
-}
+
 
 .next {
   right: 15px;
 }
 
-.next::before {
-  transform: rotate(45deg);
-  margin-left: 14px;
-  margin-top: 15px;
-}
+
 
 .nav:hover {
   background: rgba(0, 0, 0, 0.85);
 }
 
-/* @keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  } 
-}*/
 
 .booking-section {
   text-align: center;
-  margin: 50px 20px;
-
+  margin: 18px 12px;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255,255,255,0.94);
+  padding: 0.9rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
+
 .booking-btn {
   display: inline-block;
   padding: 12px 25px;
-  background-color: #4CAF50;
+  background-color: #1e73be;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
   margin-top: 20px;
+  font-weight: 700;
 }
+
+.booking-btn:hover { opacity: 0.95; }
