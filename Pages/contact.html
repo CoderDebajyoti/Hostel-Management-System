@@ -1,74 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/contact.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Hostel Management System</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
+  <script src="../js/app.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <div id="navbar">
-            <a id="logo" href="../index.html"></a>
-            <a href="./services.html">SERVICES</a>
-            <a href="./about.html">ABOUT</a>
-            <a href="./contact.html">CONTACT</a>
-            <a href="./login.html">LOGIN/REGISTER</a>
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="brand" href="../index.html">HostelHub</a>
+      <nav class="nav-links">
+        <a href="./services.html">Services</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./login.html">Login / Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <section class="contact-grid">
+      <div class="booking-card">
+        <h1>Book a service</h1>
+        <p>Submit your room request and keep all bookings visible on the dashboard.</p>
+
+        <form id="bookingForm" class="booking-form" novalidate>
+          <label for="studentName">Student name</label>
+          <input id="studentName" name="studentName" type="text" placeholder="e.g. Priya Singh" required />
+
+          <label for="studentId">Student ID</label>
+          <input id="studentId" name="studentId" type="text" placeholder="e.g. S12345" required />
+
+          <label for="roomNo">Room no.</label>
+          <input id="roomNo" name="roomNo" type="text" placeholder="e.g. B-204" required />
+
+          <label for="service">Service required</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option>Cleaning</option>
+            <option>Maintenance</option>
+            <option>Internet / WiFi</option>
+            <option>Laundry</option>
+            <option>Housekeeping</option>
+            <option>Other</option>
+          </select>
+
+          <label for="details">Details</label>
+          <textarea id="details" name="details" rows="4" placeholder="Optional description"></textarea>
+
+          <button type="submit" class="button button-primary">Submit Booking</button>
+        </form>
+      </div>
+
+      <aside class="info-card">
+        <h2>Emergency contacts</h2>
+        <ul class="emergency-list">
+          <li>
+            <strong>Police:</strong>
+            <span>100</span>
+          </li>
+          <li>
+            <strong>Fire:</strong>
+            <span>101</span>
+          </li>
+          <li>
+            <strong>Ambulance:</strong>
+            <span>102 / 108</span>
+          </li>
+        </ul>
+        <p class="note">If this is an urgent safety issue, please call the local emergency service immediately.</p>
+      </aside>
+    </section>
+
+    <section class="booking-summary-card">
+      <div class="summary-grid">
+        <div class="summary-card">
+          <h3>Total bookings</h3>
+          <p id="bookingCount">0</p>
         </div>
-    </header>
-    <main>
-        <section class="contact-container">
-            <div class="booking">
-                <h2>Book a Service</h2>
-                <form method="post" action="#" class="booking-form" novalidate>
-                    <label for="studentId">Student ID</label>
-                    <input type="text" id="studentId" name="studentId" placeholder="e.g. S12345" required>
+        <div class="summary-card">
+          <h3>Booked rooms</h3>
+          <p id="bookedRooms">0</p>
+        </div>
+        <div class="summary-card">
+          <h3>Room availability</h3>
+          <p id="roomStatus">20 rooms available</p>
+        </div>
+      </div>
+    </section>
 
-                    <label for="roomNo">Room No.</label>
-                    <input type="text" id="roomNo" name="roomNo" placeholder="e.g. B-204" required>
+    <section class="booking-list-card">
+      <div class="section-header">
+        <h2>Current bookings</h2>
+        <p>Manage the list from the form above. Tap delete to remove a completed request.</p>
+      </div>
+      <p id="noBookingsText" class="no-bookings">No bookings yet. Add one using the form.</p>
+      <ul id="bookingList" class="booking-list"></ul>
+    </section>
+  </main>
 
-                    <label for="service">Service Required</label>
-                    <select id="service" name="service" required>
-                        <option value="">-- Select a service --</option>
-                        <option>Cleaning</option>
-                        <option>Maintenance</option>
-                        <option>Internet / Wi‑Fi</option>
-                        <option>Laundry</option>
-                        <option>Housekeeping</option>
-                        <option>Other</option>
-                    </select>
-
-                    <label for="details">Details (optional)</label>
-                    <textarea id="details" name="details" rows="4" placeholder="Describe the issue or request"></textarea>
-
-                    <button type="submit" class="btn">Submit Booking</button>
-                </form>
-            </div>
-
-            <aside class="emergency">
-                <h2>Emergency Contacts</h2>
-                <ul class="emergency-list">
-                    <li>
-                        <strong>Police:</strong>
-                        <span>100</span>
-                    </li>
-                    <li>
-                        <strong>Fire:</strong>
-                        <span>101</span>
-                    </li>
-                    <li>
-                        <strong>Ambulance:</strong>
-                        <span>102 or 108</span>
-                    </li>
-                </ul>
-                <p class="note">If this is a life-threatening emergency, call your local emergency number immediately.</p>
-            </aside>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Hostel Management System. All rights reserved.</p>
-    </footer>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Hostel Management System. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
+
 </html>
