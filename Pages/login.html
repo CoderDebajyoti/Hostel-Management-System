@@ -4,43 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <title>Login - Hostel Management System</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/app.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <div id="navbar">
-            <a id="logo" href="../index.html"></a>
-            <a href="./services.html">SERVICES</a>
-            <a href="./about.html">ABOUT</a>
-            <a href="./contact.html">CONTACT</a>
-            <a href="./login.html">LOGIN/REGISTER</a>
-        </div>
-    </header>
-    <main>
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="brand" href="../index.html">HostelHub</a>
+      <nav class="nav-links">
+        <a href="./services.html">Services</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./login.html">Login / Register</a>
+      </nav>
+    </div>
+  </header>
 
-        <form class="form">
-            <p class="form-title">Welcome Back</p>
-            <div class="input-container">
-                <input type="email" placeholder="Enter email">
-                <span>
-                </span>
-            </div>
-            <div class="input-container">
-                <input type="password" placeholder="Enter password">
-            </div>
-            <button type="submit" class="submit">
-                Login
-            </button>
+  <main class="auth-page">
+    <div class="auth-card container">
+      <h1>Welcome back</h1>
+      <p>Sign in to manage your bookings and room details.</p>
 
-            <p class="signup-link">
-                No account?
-                <a href="./register.html">Sign up</a>
-            </p>
-        </form>
-    </main>
+      <form id="loginForm" class="auth-form" novalidate>
+        <label for="loginEmail">Email address</label>
+        <input id="loginEmail" type="email" name="email" placeholder="Enter your email" required />
+
+        <label for="loginPassword">Password</label>
+        <input id="loginPassword" type="password" name="password" placeholder="Enter your password" required />
+
+        <button type="submit" class="button button-primary">Login</button>
+      </form>
+
+      <p class="auth-switch">
+        No account? <a href="./register.html">Create one here</a>
+      </p>
+    </div>
+  </main>
 
     <footer>
         <p>&copy; 2026 Hostel Management System. All rights reserved.</p>
