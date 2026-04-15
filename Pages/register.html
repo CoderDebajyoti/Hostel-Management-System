@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/login.css">
-</head>
-<body>
-    <header>
-        <div id="navbar">
-            <a id="logo" href="../index.html"></a>
-            <a href="./services.html">SERVICES</a>
-            <a href="./about.html">ABOUT</a>
-            <a href="./contact.html">CONTACT</a>
-            <a href="./login.html">LOGIN/REGISTER</a>
-        </div>
-    </header>
-    <main>
-        <!-- Similar to login form, but for register -->
-        <form class="form">
-            <p class="form-title">Register</p>
-            <div class="input-container">
-                <input type="text" placeholder="Enter name">
-            </div>
-            <div class="input-container">
-                <input type="email" placeholder="Enter email">
-            </div>
-            <div class="input-container">
-                <input type="password" placeholder="Enter password">
-            </div>
-            <button type="submit" class="submit">Register</button>
-            <p class="signup-link">
-                Already have an account? <a href="./login.html">Sign in</a>
-            </p>
-        </form>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 Hostel Management System. All rights reserved.</p>
-    </footer>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Hostel Management System</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/login.css" />
+  <script src="../js/app.js" defer></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="brand" href="../index.html">HostelHub</a>
+      <nav class="nav-links">
+        <a href="./services.html">Services</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./login.html">Login / Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-page">
+    <div class="auth-card container">
+      <h1>Create account</h1>
+      <p>Register to book rooms and track student details.</p>
+
+      <form id="registerForm" class="auth-form" novalidate>
+        <label for="registerName">Full name</label>
+        <input id="registerName" type="text" name="name" placeholder="Enter your name" required />
+
+        <label for="registerEmail">Email address</label>
+        <input id="registerEmail" type="email" name="email" placeholder="Enter your email" required />
+
+        <label for="registerPassword">Password</label>
+        <input id="registerPassword" type="password" name="password" placeholder="Create a password" required />
+
+        <button type="submit" class="button button-primary">Register</button>
+      </form>
+
+      <p class="auth-switch">
+        Already have an account? <a href="./login.html">Sign in</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Hostel Management System. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
+
 </html>
