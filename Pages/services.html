@@ -4,23 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>Services - Hostel Management System</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/service.css">
+    <script src="../js/app.js" defer></script>
 </head>
 <body>
-    <header>
-        <div id="navbar">
-            <a id="logo" href="../index.html"></a>
-            <a href="./services.html">SERVICES</a>
-            <a href="./about.html">ABOUT</a>
-            <a href="./contact.html">CONTACT</a>
-            <a href="./login.html">LOGIN/REGISTER</a>
-        </div>
-    </header>
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="brand" href="../index.html">HostelHub</a>
+      <nav class="nav-links">
+        <a href="./services.html">Services</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./login.html">Login / Register</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- SLIDER SECTION -->
-    <div class="slider-container">
+  <main class="container">
+    <section class="slider-container">
         <div class="slider">
 
             <div class="slide active">
@@ -92,56 +95,19 @@
 
     <!-- BOOKING SECTION -->
     <section class="booking-section">
-        <h2>Book Our Services</h2>
-        <p>
-            Ready to experience our premium hostel facilities?
-            Contact us today for reservations and inquiries.
-        </p>
-        <a href="./contact.html" class="booking-btn">Contact Us to Book</a>
+      <div class="section-header">
+        <h2>Book our services</h2>
+        <p>Contact us to reserve your room or request help from the hostel team.</p>
+      </div>
+      <a href="./contact.html" class="booking-btn">Contact us to book</a>
     </section>
-    <footer>
-        <p>&copy; 2026 Hostel Management System. All rights reserved.</p>
-    </footer>
+  </main>
 
-    <!-- SLIDER SCRIPT -->
-    <script>
-        const slides = document.querySelectorAll(".slide");
-        const nextBtn = document.querySelector(".next");
-        const prevBtn = document.querySelector(".prev");
-
-        let currentSlide = 0;
-        let interval = setInterval(nextSlide, 2000);
-
-        function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove("active"));
-            slides[index].classList.add("active");
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        nextBtn.addEventListener("click", () => {
-            nextSlide();
-            resetInterval();
-        });
-
-        prevBtn.addEventListener("click", () => {
-            prevSlide();
-            resetInterval();
-        });
-
-        function resetInterval() {
-            clearInterval(interval);
-            interval = setInterval(nextSlide, 2000);
-        }
-    </script>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Hostel Management System. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 
